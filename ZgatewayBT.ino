@@ -204,7 +204,7 @@ void setupBT() {
 boolean BTtoMQTT() {
 
   //extract serial data from module in hexa format
-  while (softserial.available() > 0 && returnedString.length < 250) {
+  while (softserial.available() > 0 && returnedString.length() < 250) {
       int a = softserial.read();
       if (a < 16) {
         returnedString = returnedString + "0";
